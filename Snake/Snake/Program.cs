@@ -8,27 +8,34 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            int x = 1;
-           // Func1(x);
-            Console.WriteLine("Call Func1. x = " + x);
+            Point p1 = new Point(3, 4, '*');
+            p1.Draw();
 
-            x = 1;
-           // Func2(x);
-            Console.WriteLine("Call Func2. x = " + x);
+            Point p2 = new Point(4, 5, '#');
+            p2.Draw();
 
-            x = 1;
-            //Func3(x);
-            Console.WriteLine("Call Func3. x = " + x);
+            Point p3 = new Point(6, 8, '$');
 
-            Point p1 = new Point(1,3,'*');
-            Console.WriteLine("Call Move. p1.x = " + p1.y);
+            List<int> numList = new List<int>();
+            numList.Add(0);
+            numList.Add(1);
+            numList.Add(2);
 
-            Point p2 = new Point(4,5,'#');
-            p1 = p2;
-            p2.x = 8;
-            p2.y = 8;
-            Console.WriteLine("Call Func1. x = " + x);
+            int x = numList[0];
+            int y = numList[1];
+            int z = numList[2];
 
+            foreach(int num in numList)
+            {
+                Console.WriteLine(num);
+            }
+
+            List<Point> listP = new List<Point>();
+            listP.Add(p1);
+            listP.Add(p2);
+            listP.Add(p3);
+
+            listP[2].Draw();
             Console.ReadLine();
         }
     }
